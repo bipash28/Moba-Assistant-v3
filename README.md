@@ -67,7 +67,7 @@ npm install -g @nativescript/cli
 
 2. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/bipash28/Moba-Assistant-v3
 ```
 
 3. Install dependencies:
@@ -76,11 +76,13 @@ npm install
 ```
 
 ### Development
+For Android
 ```bash
-# For Android
 ns run android
+```
 
-# For iOS
+For iOS
+```bash
 ns run ios
 ```
 
@@ -98,16 +100,16 @@ To generate a release APK (for production):
 
 1. Generate a keystore (only needed once):
 ```bash
-keytool -genkey -v -keystore mlbb-assistant.keystore -alias mlbb-assistant -keyalg RSA -keysize 2048 -validity 10000
+keytool -genkey -v -keystore moba-assistant.keystore -alias moba-assistant -keyalg RSA -keysize 2048 -validity 10000
 ```
 
 2. Create a `keystore.json` file in the root directory:
 ```json
 {
     "android": {
-        "keystore": "mlbb-assistant.keystore",
+        "keystore": "moba-assistant.keystore",
         "storePassword": "your-store-password",
-        "alias": "mlbb-assistant",
+        "alias": "moba-assistant",
         "password": "your-key-password"
     }
 }
@@ -115,7 +117,7 @@ keytool -genkey -v -keystore mlbb-assistant.keystore -alias mlbb-assistant -keya
 
 3. Build the release APK:
 ```bash
-ns build android --release --key-store-path mlbb-assistant.keystore --key-store-password your-store-password --key-store-alias mlbb-assistant --key-store-alias-password your-key-password
+ns build android --release --key-store-path moba-assistant.keystore --key-store-password your-store-password --key-store-alias moba-assistant --key-store-alias-password your-key-password
 ```
 The release APK will be generated at: `platforms/android/app/build/outputs/apk/release/app-release.apk`
 
